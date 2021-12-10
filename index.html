@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Code Quiz!</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">High Scores</a></li>
+                    <li>
+                        <div>
+                            <h2>Timer: <span id="countdown"></span></h2>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!--Start Page-->
+        <h1>Coding Quiz Challenge!</h1>
+        <p>Time to put your thinking cap's on and step up to the CQC! Players can test their Javascript knowledge by
+            participating in this fast paced multiple choice quiz. Players will be timed! If a player answers a question
+            incorrectly, time will be deducted from the remaining time limit. When the timer hits 0, the game is over.
+            Test your mettle and try to get the high score. Press Start to begin!!</p>
+        <button type=button id="start-btn" class="btn">Start</button>
+        <!--Start End-->
+
+        <!--Questions Section-->
+        <div class="container" id="">
+            <h2>Question # 1:</h2>
+            <p class="question" id="q-"></p>
+            <hr>
+            <button type=button id="q-btn" class="btn"></button>
+            <button type=button id="q-btn" class="btn"></button>
+            <button type=button id="q-btn" class="btn"></button>
+            <button type=button id="q-btn" class="btn"></button>
+            <hr>
+            <div class="answer-status" data-state=""></div>
+        </div>
+        <div class="container" id="">
+            <h2>Question # 2:</h2>
+            <p class="question" id="q-"></p>
+            <hr>
+            <button type=button id="q-btn" class="btn"></button>
+            <button type=button id="q-btn" class="btn"></button>
+            <button type=button id="q-btn" class="btn"></button>
+            <button type=button id="q-btn" class="btn"></button>
+            <hr>
+            <div class="answer-status" data-state=""></div>
+        </div>
+        <div class="container" id="">
+            <h2>Question # 3:</h2>
+            <p class="question" id="q-"></p>
+            <hr>
+            <button type=button id="q-btn" class="btn"></button>
+            <button type=button id="q-btn" class="btn"></button>
+            <button type=button id="q-btn" class="btn"></button>
+            <button type=button id="q-btn" class="btn"></button>
+            <hr>
+            <div class="answer-status" data-state=""></div>
+        </div>
+        <div class="container" id="">
+            <h2>Question # 4:</h2>
+            <p class="question" id="q-"></p>
+            <hr>
+            <button type=button id="q-btn" class="btn"></button>
+            <button type=button id="q-btn" class="btn"></button>
+            <button type=button id="q-btn" class="btn"></button>
+            <button type=button id="q-btn" class="btn"></button>
+            <hr>
+            <div class="answer-status" data-state=""></div>
+        </div>
+        <div class="container" id="">
+            <h2>Question # 5:</h2>
+            <p class="question" id="q-"></p>
+            <hr>
+            <button type=button id="q-btn" class="btn"></button>
+            <button type=button id="q-btn" class="btn"></button>
+            <button type=button id="q-btn" class="btn"></button>
+            <button type=button id="q-btn" class="btn"></button>
+            <hr>
+            <div class="answer-status" data-state=""></div>
+        </div>
+        <!--Questions End-->
+        <!--Game Over Page-->
+        <h2>Congratulations!!! Test Complete!!</h2>
+        <p>Your Final Score is: <span id="finalScore"></span></p>
+        <hr>
+        <label for="initials">Enter your initials to be immortalized in the CQC Hall of Fame:</label>
+        <input type="text" id="initials" name="name" required minlength="2" maxlength="5">
+        <button type="submit" id="initialSubmit" class="btn"></button>
+        <button type=button id="playAgain-btn" class="btn">Play Again?</button>
+        <!--Game Over End-->
+        <script src="./assets/script.js"></script>
+    </body>
+
+</html>
