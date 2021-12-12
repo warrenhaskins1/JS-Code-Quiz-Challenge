@@ -44,24 +44,27 @@
         <!--Questions Section-->
         <div class="container" id="q1">
             <h2>Question # 1:</h2>
-            <p class="question" id="q-">Commonly used Data Types DO NOT include:</p>
+            <p class="question">Commonly used Data Types DO NOT include:</p>
             <hr>
-            <button type=button id="q-btn" class="btn">1. strings</button>
-            <button type=button id="q-btn" class="btn">2. booleans</button>
-            <button type=button id="q-btn" class="btn">3. alerts</button>
-            <button type=button id="q-btn" class="btn">4. numbers</button>
+            <div class ="q1Buttons">
+                <button type=button id="wrong" class="btn" data-state = "incorrect">1. strings</button>
+                <button type=button id="wrong" class="btn" data-state = "incorrect">2. booleans</button>
+                <button type=button id="correct" class="btn" data-state = "correct">3. alerts</button>
+                <button type=button id="wrong" class="btn" data-state = "incorrect">4. numbers</button>
+            </div>
             <hr>
-            <div class="answer-status" data-state="">Correct!</div>
+            <div id="q1Correct">CORRECT!!!</div>
+            <div id="q1Incorrect">INCORRECT!!!!</div>
         </div>
         <div class="container" id="q2">
             <h2>Question # 2:</h2>
             <p class="question" id="q-">The condition in an if/else statement is enclosed with <span
                     class="underline"></span>?</p>
             <hr>
-            <button type=button id="q-btn" class="btn">1. quotes</button>
-            <button type=button id="q-btn" class="btn">2. parenthesis</button>
-            <button type=button id="q-btn" class="btn">3. curly braces</button>
-            <button type=button id="q-btn" class="btn">4. brackets</button>
+            <button type=button id="q2-btn1" class="btn">1. quotes</button>
+            <button type=button id="q2-btn2" class="btn">2. parenthesis</button>
+            <button type=button id="q2-btn3" class="btn">3. curly braces</button>
+            <button type=button id="q2-btn4" class="btn">4. brackets</button>
             <hr>
             <div class="answer-status" data-state="">Correct!</div>
         </div>

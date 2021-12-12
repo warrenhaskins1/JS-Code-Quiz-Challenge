@@ -101,6 +101,20 @@ p {
     display: none;
 }
 
+#q1Correct {
+    color: green;
+    font-size: 28px;
+    font-weight: bold;
+    display: none;
+}
+
+#q1Incorrect {
+    color: red;
+    font-size: 28px;
+    font-weight: bold;
+    display: none;
+}
+
 #gameOver {
     display: none;
 }
