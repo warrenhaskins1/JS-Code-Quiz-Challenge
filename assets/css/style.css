@@ -1,10 +1,10 @@
-*{
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
 body {
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
 }
 
 html {
@@ -12,31 +12,46 @@ html {
 }
 
 header {
-    padding: 60px;
+    padding: 10px;
     text-align: center;
     width: 100%;
     margin: 0px auto;
 }
-
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-nav a {
-text-decoration: none;
-font-size: 24px;
-font-weight: bold;
-}
-
-nav li {
-    list-style-type: none;
-}
+#navbar {
+    overflow: hidden;
+    background-color: rgb(65, 158, 219);
+  }
+  
+  /* Navbar links */
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  
+  /* Page content */
+  .content {
+    padding: 16px;
+  }
+  
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  }
 
 h1, h2 {
     text-align: center;
-     
+
 }
 
 p {
@@ -51,18 +66,41 @@ p {
     margin: 10px;
     border-radius: 12px;
     padding: 5px;
-    background: linear-gradient(45deg, #156077,#08c5ff);
+    background: linear-gradient(45deg, #156077, #08c5ff);
     text-align: center;
-    
-}
-
-.btn:hover{
 
 }
+
+.btn:hover {}
 
 .container {
     text-align: center;
 }
 
+#startScreen {
+    
+}
 
+#q1 {
+    display: none;
+}
 
+#q2 {
+    display: none;
+}
+
+#q3 {
+    display: none;
+}
+
+#q4 {
+    display: none;
+}
+
+#q5 {
+    display: none;
+}
+
+#gameOver {
+    display: none;
+}

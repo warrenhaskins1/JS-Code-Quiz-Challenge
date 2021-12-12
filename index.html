@@ -11,30 +11,38 @@
 
     <body>
         <header>
-            <nav>
-                <ul>
-                    <li><a href="#">High Scores</a></li>
-                    <li>
-                        <div>
-                            <h2 class ="timer">Timer: <span id="countdown"></span></h2>
-                        </div>
-                    </li>
-                </ul>
+            <nav id="navbar">
+                <a href="#">High Scores</a></li>
+                <div class="timerDisplay">
+                    <h2 class="timer" id="countdown">Timer:</h2>
+
+                </div>
             </nav>
         </header>
         <!--Start Page-->
-        <h1>Coding Quiz Challenge!</h1>
-        <p>Time to put your thinking cap's on and step up to the CQC!<br> Players can test their Javascript knowledge by
-            participating in this fast paced multiple choice quiz. <br>Players will be timed! If a player answers a question
-            incorrectly, time will be deducted from the remaining time limit.<br> When the timer hits 0, the game is over.
-            Test your mettle and try to get the high score. <br>Press Start to begin!!</p><div class="container">
-                <button type=button id="start-btn" class="btn">Start</button>
-            </div>
-       
-        <!--Start End-->
+        <div id="startScreen">
+            <h1>Coding Quiz Challenge!</h1>
+            <p>Time to put your thinking cap on and step up to the CQC!<br> Players can test their Javascript knowledge
+                by
+                participating in this fast paced multiple choice quiz. <br>Players will be timed! If a player answers a
+                question
+                incorrectly, time will be deducted from the remaining time limit.<br> When the timer hits 0, the game is
+                over.
+                Test your mettle and try to get the high score. <br>Press Start to begin!!</p>
 
+        </div>
+        <div class="container">
+            <button type=button id="start-btn" class="btn">Start</button>
+        </div>
+
+
+        <!--Start End-->
+        <!--Main Display-->
+        <!-- <main class="main-container">
+
+        </main> -->
         <!--Questions Section-->
-        <div class="container" id="">
+        <div class="container" id="q1">
             <h2>Question # 1:</h2>
             <p class="question" id="q-">Commonly used Data Types DO NOT include:</p>
             <hr>
@@ -45,9 +53,10 @@
             <hr>
             <div class="answer-status" data-state="">Correct!</div>
         </div>
-        <div class="container" id="">
+        <div class="container" id="q2">
             <h2>Question # 2:</h2>
-            <p class="question" id="q-">The condition in an if/else statement is enclosed with <span class="underline"></span>?</p>
+            <p class="question" id="q-">The condition in an if/else statement is enclosed with <span
+                    class="underline"></span>?</p>
             <hr>
             <button type=button id="q-btn" class="btn">1. quotes</button>
             <button type=button id="q-btn" class="btn">2. parenthesis</button>
@@ -56,7 +65,7 @@
             <hr>
             <div class="answer-status" data-state="">Correct!</div>
         </div>
-        <div class="container" id="">
+        <div class="container" id="q3">
             <h2>Question # 3:</h2>
             <p class="question" id="q-">Arrays in Javascript can be used to store <span class="underline"></span>?</p>
             <hr>
@@ -67,9 +76,10 @@
             <hr>
             <div class="answer-status" data-state="">Correct!</div>
         </div>
-        <div class="container" id="">
+        <div class="container" id="q4">
             <h2>Question # 4:</h2>
-            <p class="question" id="q-">String values must be enclosed within <span class="underline"></span> when being assigned to variables?</p>
+            <p class="question" id="q-">String values must be enclosed within <span class="underline"></span> when being
+                assigned to variables?</p>
             <hr>
             <button type=button id="q-btn" class="btn">1. commas</button>
             <button type=button id="q-btn" class="btn">2. curly braces</button>
@@ -78,9 +88,10 @@
             <hr>
             <div class="answer-status" data-state="">Correct!</div>
         </div>
-        <div class="container" id="">
+        <div class="container" id="q5">
             <h2>Question # 5:</h2>
-            <p class="question" id="q-">A very useful tool during development and debugging for printing content to the screen is?</p>
+            <p class="question" id="q-">A very useful tool during development and debugging for printing content to the
+                screen is?</p>
             <hr>
             <button type=button id="q-btn" class="btn">1. Javascript</button>
             <button type=button id="q-btn" class="btn">2. Terminal/Bash</button>
@@ -91,39 +102,46 @@
         </div>
         <!--Questions End-->
         <!--Game Over Page1-->
-        <h2>Congratulations!!! Test Complete!!</h2>
+        <div id="gameOver">
+            <h2>Congratulations!!! Test Complete!!</h2>
 
-        <p>Your Final Score is: <span id="finalScore"></span></p>
-        <hr>
-        <div class="container" id="highScoreBoard">
-            <table>
-                <tr>
-                    <th>Leader Board</th>
-                </tr>
-                <tr>
-                    <td>1st</td>
-                    <td>test</td>
-                </tr>
-                <tr><td>2nd</td>
-                    <td>test</td>
-                </tr>
-                <tr><td>3rd</td>
-                    <td>test</td>
-                </tr>
-                <tr><td>4th</td>
-                    <td>test</td>
-                </tr>
-                <tr><td>5th</td>
-                    <td>test</td>
-                </tr>
-            </table>
+            <p>Your Final Score is: <span id="finalScore"></span></p>
+            <hr>
+            <div class="container" id="highScoreBoard">
+                <table>
+                    <tr>
+                        <th>Leader Board</th>
+                    </tr>
+                    <tr>
+                        <td>1st</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>2nd</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>3rd</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>4th</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>5th</td>
+                        <td>test</td>
+                    </tr>
+                </table>
+            </div>
+            <label for="initials">Enter your initials to be immortalized in the CQC Hall of Fame:</label>
+            <input type="text" id="initials" name="name" required minlength="2" maxlength="5">
+            <button type="submit" id="initialSubmit" class="btn">Submit</button>
+            <button type=button id="playAgain-btn" class="btn">Play Again?</button>
+            <!--Game Over End-->
         </div>
-        <label for="initials">Enter your initials to be immortalized in the CQC Hall of Fame:</label>
-        <input type="text" id="initials" name="name" required minlength="2" maxlength="5">
-        <button type="submit" id="initialSubmit" class="btn">Submit</button>
-        <button type=button id="playAgain-btn" class="btn">Play Again?</button>
-        <!--Game Over End-->
-        <script src="./assets/script.js"></script>
+
+        <script src="./assets/js/script.js"></script>
     </body>
 
 </html>
