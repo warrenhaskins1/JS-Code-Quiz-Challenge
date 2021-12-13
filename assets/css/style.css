@@ -101,14 +101,23 @@ p {
     display: none;
 }
 
-#q1Correct {
+#q1Correct, 
+#q2Correct, 
+#q3Correct, 
+#q4Correct, 
+#q5Correct
+ {
     color: green;
     font-size: 28px;
     font-weight: bold;
     display: none;
 }
 
-#q1Incorrect {
+#q1Incorrect,
+#q2Incorrect,
+#q3Incorrect,
+#q4Incorrect,
+#q5Incorrect {
     color: red;
     font-size: 28px;
     font-weight: bold;

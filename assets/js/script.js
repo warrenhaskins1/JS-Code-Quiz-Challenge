@@ -37,8 +37,6 @@ function startDisplay() {
     document.getElementById("q1").style.display = "block";
     document.getElementById("start-btn").style.display = "none";
 }
-
-
 //We need to target the buttons for Question #1 and find a way to target them on eventListen to change their status.
 var q1Buttons = document.querySelector(".q1Buttons");
 
@@ -53,8 +51,9 @@ function Incorrect() {
     document.getElementById("q1Incorrect").style.display = "block";
     timeLeft -= 3;
 }
-
-//We need a function that targets the button events and makes changes based on which button was pressed
+//We need a function that targets the button events and makes changes based on which button was pressed.
+//Can we set this to a general any buttons that are question related?
+//Can we use a loop to iterate through an array of questions where if a buttono is pressed, we move to the next question?
 q1Buttons.addEventListener("click", function (event) {
     var element = event.target;
     if (element.matches(".btn")) {
@@ -64,7 +63,15 @@ q1Buttons.addEventListener("click", function (event) {
         } else if (state === "incorrect") {
             Incorrect();
         }
+        document.getElementById("q1").style.display = "none";
+        document.getElementById("q2").style.display = "block";
     }
-})
+});
+
+
+
+
+
+
 
 
