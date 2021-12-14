@@ -4,11 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Timers and Intervals</title>
+    <title>JS Code Quiz!</title>
 </head>
 <body>  
-    <h1 class="time" style="text-align:center;"></h1>
-    <div id="main"></div>
+    <header>
+        <nav id="navbar">
+            <a href="#">High Scores</a></li>
+            <div class="timerDisplay">
+                <h2 class="timer" id="countdown">Timer:</h2>
+
+            </div>
+        </nav>
+    </header>
+    <div id="startScreen">
+        <h1>Coding Quiz Challenge!</h1>
+        <p>Time to put your thinking cap on and step up to the CQC!<br> Players can test their Javascript knowledge
+            by
+            participating in this fast paced multiple choice quiz. <br>Players will be timed! If a player answers a
+            question
+            incorrectly, time will be deducted from the remaining time limit.<br> When the timer hits 0, the game is
+            over.
+            Test your mettle and try to get the high score. <br>Press Start to begin!!</p>
+
+    </div>
+    <div class="container">
+        <button type=button id="start-btn" class="btn">Start</button>
+    </div>
 
     <script src="./script2.js"></script>
 </body>
