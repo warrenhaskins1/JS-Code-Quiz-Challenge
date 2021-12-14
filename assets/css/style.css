@@ -17,37 +17,38 @@ header {
     width: 100%;
     margin: 0px auto;
 }
+
 #navbar {
     overflow: hidden;
     background-color: rgb(65, 158, 219);
-  }
-  
-  /* Navbar links */
-  #navbar a {
+}
+
+/* Navbar links */
+#navbar a {
     float: left;
     display: block;
     color: #f2f2f2;
     text-align: center;
     padding: 14px;
     text-decoration: none;
-  }
-  
-  /* Page content */
-  .content {
+}
+
+/* Page content */
+.content {
     padding: 16px;
-  }
-  
-  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-  .sticky {
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
     position: fixed;
     top: 0;
     width: 100%;
-  }
-  
-  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky+.content {
     padding-top: 60px;
-  }
+}
 
 h1, h2 {
     text-align: center;
@@ -62,7 +63,7 @@ p {
 }
 
 .btn {
-    font-size: 18px;
+    font-size: 25px;
     margin: 10px;
     border-radius: 12px;
     padding: 5px;
@@ -71,13 +72,24 @@ p {
 
 }
 
-.btn:hover {}
+
 
 .container {
     text-align: center;
 }
 
-#startScreen {
+
+
+/* Screen Display properties Start */
+#startScreen {}
+
+#next1,
+#next2,
+#next3,
+#next4,
+#next5 {
+    display: none;
+   
     
 }
 
@@ -101,12 +113,23 @@ p {
     display: none;
 }
 
-#q1Correct, 
-#q2Correct, 
-#q3Correct, 
-#q4Correct, 
-#q5Correct
- {
+
+#gameOver {
+    display: none;
+    align-items: center;
+    margin: 0px auto;
+    padding: 20px, 20px;
+}
+
+/* Screen Display Properties End */
+
+
+/* Correct/Incorrect Screen Messages Start */
+#q1Correct,
+#q2Correct,
+#q3Correct,
+#q4Correct,
+#q5Correct {
     color: green;
     font-size: 28px;
     font-weight: bold;
@@ -124,6 +147,20 @@ p {
     display: none;
 }
 
-#gameOver {
+.correct {
+    color: green;
+    font-size: 28px;
+    font-weight: bold;
     display: none;
 }
+.incorrect {
+    color: red;
+    font-size: 28px;
+    font-weight: bold;
+    display: none;
+}
+
+.table {
+    align-items: center;
+}
+/* Correct/Incorrect Screen Messages End */
