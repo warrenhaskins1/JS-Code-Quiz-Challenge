@@ -6,26 +6,27 @@ var q2Buttons = document.querySelector(".q2Buttons");
 var q3Buttons = document.querySelector(".q3Buttons");
 var q4Buttons = document.querySelector(".q4Buttons");
 var q5Buttons = document.querySelector(".q5Buttons");
-// Use these for Play again/Submit
-var q1Buttons = document.querySelector(".q1Buttons");
-var q1Buttons = document.querySelector(".q1Buttons");
+var playAgain = document.getElementById("playAgain");
+var finalScore = document.getElementById("finalScore");
 
-
+var userScore =0;
+var clicked = false;
+var timeInterval = setInterval;
 
 
 // We need a function to stop the timer when the game ends by answering all of the questions 
-    function endGame() {
-        clearInterval(timeInterval);
-    };
+function endGame() {
+    clearInterval(timeInterval);
+};
 
 
 start.addEventListener("click", startGame);
 start.addEventListener("click", startDisplay);
-
+console.log(start);
 // Set timeLeft as global variable or else you cant subtract time on incorrect answer
 var timeLeft = 60;
 function startGame() {
-    var timeInterval = setInterval
+     timeInterval = setInterval
         (function () {
             // As long as the `timeLeft` is greater than 1
             if (timeLeft > 1) {
@@ -37,7 +38,13 @@ function startGame() {
                 // When `timeLeft` is equal to 1, rename to 'second' instead of 'seconds'
                 countdown.textContent = timeLeft + ' second remaining';
                 timeLeft--;
-            } 
+            }
+            else if (clicked == true) {
+                // clearInterval(timeInterval);
+                timeLeft = userScore;
+                
+                document.getElementById("finalScore").innerHTML = userScore;
+            }
             else {
                 // Once `timeLeft` gets to 0, set `timerEl` to an empty string
                 countdown.textContent = 'Game Over';
@@ -46,7 +53,7 @@ function startGame() {
                 // Call the `displayMessage()` function
                 displayMessage();
             }
-        });
+        }, 1000);
 
 }
 
@@ -146,11 +153,18 @@ q4Buttons.addEventListener("click", function (event) {
 
     }
 })
+q5Buttons.addEventListener("click", function() {
+    clicked == true;
+});
 q5Buttons.addEventListener("click", function (event) {
     setTimeout(function () {
         document.getElementById("q5").style.display = "none";
         document.getElementById("gameOver").style.display = "block";
+        clearInterval(timeInterval);
+        userScore = timeLeft*7;
+        console.log(userScore);
     }, 1000);
+    
     var element = event.target;
     if (element.matches(".btn")) {
         var state = element.getAttribute("data-state");
@@ -161,14 +175,15 @@ q5Buttons.addEventListener("click", function (event) {
             timeLeft -= 3;
         }
     }
-
+     
 })
+
 
 //Need function to stop timer
 //Need to get the user Score
 //We need to play again??
 //We need to submit our initials and save to local storage
-endGame();
+
 
 
 

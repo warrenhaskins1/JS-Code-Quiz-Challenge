@@ -35,3 +35,44 @@ var questions = [
 
 ];
 
+//We need our global variables set
+//We need somthing to store userScores=timer/timeLeft to put in local Storage
+//We need all of our variables to DYNAMICALLY generate our content which YOU DID NOT DO IN FIRST VERSION BECAUSE YOU DIDNT READ THE DIRECTIONS!!!!!
+
+//We need to store the qIndex
+var qIndex = 0;
+var userScore = 60;
+var timeInterval = 0;
+// var timeLeft
+//Where will our questions live? Where will our buttons go?
+var start = document.getElementById("start-btn");
+var countdown = document.getElementById("countdown");
+var qDisplay = document.getElementById("qScreen");
+var btnDisplay = document.getElementById("qBtn");
+var qMessageDisplay = document.getElementById("qMessage");
+
+//We need to have timer function when we press the start button(addEventListener(click (something))) Look at 09-10 set userScore to secondLeft??Set to 60 seconds.
+
+start.addEventListener("click", function() {
+  if (timeInterval === 0) {
+    timeInterval = setInterval(function() {
+      timeLeft--;
+      countdown.textContent = timeLeft + " seconds remaining...";
+
+      if (timeLeft <=0) {
+        clearInterval(timeInterval);
+        endGame();
+        countdown.textContent = "GAME OVER!!!";
+      }
+    }, 1000);
+  }
+})
+
+
+
+
+
+
+
+
+
