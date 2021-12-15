@@ -12,7 +12,7 @@
     <body>
         <header>
             <nav id="navbar">
-                <a href="#">High Scores</a></li>
+                <a href="index2.html">High Scores</a></li>
                 <div class="timerDisplay">
                     <h2 class="timer" id="countdown">Timer:</h2>
 
@@ -119,46 +119,30 @@
         </div>
         <!--Questions End-->
         <!--Game Over Page1-->
-        <div id="gameOver" data-state = "on">
+        <div id="gameOver" data-state="on">
             <h2>Congratulations!!! Test Complete!!</h2>
-           
+            <h2 id="finalScore"></h2>
+
             <hr>
             <div class="container" id="highScoreBoard">
-                <table class="table">
-                    <tr>
-                        <th>Leader Board</th>
-                    </tr>
-                    <tr>
-                        <td>1st</td>
-                        <td>test</td>
-                    </tr>
-                    <tr>
-                        <td>2nd</td>
-                        <td>test</td>
-                    </tr>
-                    <tr>
-                        <td>3rd</td>
-                        <td>test</td>
-                    </tr>
-                    <tr>
-                        <td>4th</td>
-                        <td>test</td>
-                    </tr>
-                    <tr>
-                        <td>5th</td>
-                        <td>test</td>
-                    </tr>
-                </table>
+                <div class="card">
+                    <h1>Leader Boards</h1>
+                    <form id="lB-form" method="POST">
+                        <label for="lB-text">Enter your initials to be immortalized in the CQC Hall of Fame:</label>
+                        <input type="text" placeholder="Your Initials Here..." name="lB-text" id="lB-text" />
+                        <button onclick="submit()"type="submit" id="submit" class="btn">Submit</button>
+                    </form>
+                    <ol id="lB-list"></ol>
+                </div>
+
+                <!-- <button type=button id="playAgain" class="btn">Play Again?</button> -->
+
+                <!--Game Over End-->
             </div>
-            <label for="initials">Enter your initials to be immortalized in the CQC Hall of Fame:</label>
-            <input type="text" id="initials" name="name" required minlength="2" maxlength="5">
-            <button type="submit" id="initialSubmit" class="btn">Submit</button>
-            <button type=button id="playAgain" class="btn">Play Again?</button>
+            <footer>
+            </footer>
 
-            <!--Game Over End-->
-        </div>
-
-        <script src="./assets/js/script.js"></script>
+            <script src="./assets/js/script.js"></script>
     </body>
 
 </html>

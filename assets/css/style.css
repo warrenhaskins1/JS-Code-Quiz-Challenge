@@ -5,6 +5,7 @@
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
+    background-color: #9cbec9;
 }
 
 html {
@@ -25,7 +26,7 @@ header {
 
 /* Navbar links */
 #navbar a {
-    float: left;
+    
     display: block;
     color: #f2f2f2;
     text-align: center;
@@ -33,26 +34,24 @@ header {
     text-decoration: none;
 }
 
-/* Page content */
+
 .content {
     padding: 16px;
 }
 
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky+.content {
     padding-top: 60px;
 }
 
 h1, h2 {
     text-align: center;
-
 }
 
 p {
@@ -67,30 +66,21 @@ p {
     margin: 10px;
     border-radius: 12px;
     padding: 5px;
-    background: linear-gradient(45deg, #156077, #08c5ff);
+    background: linear-gradient(45deg, #153777, #08c5ff);
     text-align: center;
-
 }
-
-
 
 .container {
     text-align: center;
 }
 
-
-
 /* Screen Display properties Start */
-#startScreen {}
-
 #next1,
 #next2,
 #next3,
 #next4,
 #next5 {
     display: none;
-   
-    
 }
 
 #q1 {
@@ -113,17 +103,13 @@ p {
     display: none;
 }
 
-
 #gameOver {
     display: none;
     align-items: center;
     margin: 0px auto;
     padding: 20px, 20px;
 }
-
 /* Screen Display Properties End */
-
-
 /* Correct/Incorrect Screen Messages Start */
 #q1Correct,
 #q2Correct,
@@ -160,7 +146,19 @@ p {
     display: none;
 }
 
-.table {
-    align-items: center;
-}
-/* Correct/Incorrect Screen Messages End */
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 20px;
+  }
+  
+  tr:hover {
+      background-color: rgb(0, 230, 11);
+    }
+  

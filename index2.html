@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JS Code Quiz!</title>
-</head>
-<body>  
-    <header>
-        <nav id="navbar">
-            <a href="#">High Scores</a></li>
-            <div class="timerDisplay">
-                <h2 class="timer" id="countdown">Timer:</h2>
 
-            </div>
-        </nav>
-    </header>
-    <div id="startScreen">
-        <h1>Coding Quiz Challenge!</h1>
-        <p>Time to put your thinking cap on and step up to the CQC!<br> Players can test their Javascript knowledge
-            by
-            participating in this fast paced multiple choice quiz. <br>Players will be timed! If a player answers a
-            question
-            incorrectly, time will be deducted from the remaining time limit.<br> When the timer hits 0, the game is
-            over.
-            Test your mettle and try to get the high score. <br>Press Start to begin!!</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>JS Code Quiz!</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
 
-    </div>
-    <div class="container">
-        <button type=button id="start-btn" class="btn">Start</button>
-    </div>
+    <body>
+        <header>
+            <nav id="navbar">
+                <a href="index.html">Game Start Screen</a>
+            </nav>
+        </header>
+        <div id="highScores">
+            <h1>Leader Board High Scores</h1>
+            <table>
+                <tr>
+                    <th>Winners</th>
+                    <th>Score</th>
+                </tr>
+                <tr>
+                    <td>ROB</td>
+                    <td>278</td>
+                </tr>
+                <tr>
+                    <td>JIM</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>JOE</td>
+                    <td>789</td>
+                </tr>
+                <tr>
+                    <td>WGH</td>
+                    <td>2800</td>
+                </tr>
+                   
+            </table>
 
-    <div id="qScreen">
-
-    </div>
-    <div id="qBtn" class="btn">
-
-    </div>
-    <div id="qMessage">
-        
-    </div>
+        </div>
 
 
-    <script src="./script2.js"></script>
-</body>
+
+        <script src="./script2.js"></script>
+    </body>
+
 </html>

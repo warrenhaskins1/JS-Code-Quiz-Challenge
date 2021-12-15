@@ -1,3 +1,4 @@
+//Elements/classes/id's
 var timer = document.querySelector(".timer");
 var countdown = document.getElementById("countdown");
 var start = document.getElementById("start-btn");
@@ -8,25 +9,31 @@ var q4Buttons = document.querySelector(".q4Buttons");
 var q5Buttons = document.querySelector(".q5Buttons");
 var playAgain = document.getElementById("playAgain");
 var finalScore = document.getElementById("finalScore");
+var lBInput = document.querySelector("#lB-text");
+var lBForm = document.querySelector("#lB-form");
+var lBList = document.querySelector("#lB-list");
+var submit = document.getElementById("submit");
 
-var userScore =0;
+//Global Variables
+var timeLeft = 60;
+var userScore = 0;
 var clicked = false;
 var timeInterval = setInterval;
 
+function playAgain() {
+    document.getElementById("startScreen").style.display = "block";
 
-// We need a function to stop the timer when the game ends by answering all of the questions 
-function endGame() {
-    clearInterval(timeInterval);
-};
+}
+
 
 
 start.addEventListener("click", startGame);
 start.addEventListener("click", startDisplay);
 console.log(start);
 // Set timeLeft as global variable or else you cant subtract time on incorrect answer
-var timeLeft = 60;
+
 function startGame() {
-     timeInterval = setInterval
+    timeInterval = setInterval
         (function () {
             // As long as the `timeLeft` is greater than 1
             if (timeLeft > 1) {
@@ -42,7 +49,7 @@ function startGame() {
             else if (clicked == true) {
                 // clearInterval(timeInterval);
                 timeLeft = userScore;
-                
+
                 document.getElementById("finalScore").innerHTML = userScore;
             }
             else {
@@ -131,7 +138,7 @@ q3Buttons.addEventListener("click", function (event) {
             document.getElementById("q3Correct").style.display = "block";
         } else if (state === "incorrect") {
             document.getElementById("q3Incorrect").style.display = "block";
-            timeLeft -= 3;
+            timeLeft -= 5;
         }
 
     }
@@ -148,12 +155,12 @@ q4Buttons.addEventListener("click", function (event) {
             document.getElementById("q4Correct").style.display = "block";
         } else if (state === "incorrect") {
             document.getElementById("q4Incorrect").style.display = "block";
-            timeLeft -= 3;
+            timeLeft -= 7;
         }
 
     }
 })
-q5Buttons.addEventListener("click", function() {
+q5Buttons.addEventListener("click", function () {
     clicked == true;
 });
 q5Buttons.addEventListener("click", function (event) {
@@ -161,10 +168,12 @@ q5Buttons.addEventListener("click", function (event) {
         document.getElementById("q5").style.display = "none";
         document.getElementById("gameOver").style.display = "block";
         clearInterval(timeInterval);
-        userScore = timeLeft*7;
+        userScore = timeLeft * 7;
+        finalScore.innerHTML = "Your Final Score is: " + userScore;
         console.log(userScore);
+
     }, 1000);
-    
+
     var element = event.target;
     if (element.matches(".btn")) {
         var state = element.getAttribute("data-state");
@@ -172,17 +181,34 @@ q5Buttons.addEventListener("click", function (event) {
             document.getElementById("q5Correct").style.display = "block";
         } else if (state === "incorrect") {
             document.getElementById("q5Incorrect").style.display = "block";
-            timeLeft -= 3;
+            timeLeft -= 10;
         }
     }
-     
+
 })
 
+//Get the value of the input text field
+//We need to store users Score and initials in local storage
+function submit() {
+    var initials = document.getElementById("lb-text").value;
+    var fScores = document.getElementById('finalScores').value;
+    var allInitials = JSON.parse(localStorage.getItem("allInitials")) || [];
+    allInitials.push(initials);
+    var allFScores = JSON.parse(localStorage.getItem("allFScores")) || [];
+    allFScores.push(fScores);
+    localStorage.setItem("allInitials", JSON.stringify(allInitials));
+    document.getElementById("lb-text").value = "";
+    document.getElementsById("lb-list").innerHTML = localStorage.getItem("allInitials")
+    localStorage.setItem("allFScores", JSON.stringify(allFScores));
+    document.getElementById("fScores").value = "";
+    document.getElementsById("lb-list").innerHTML = localStorage.getItem("allFScores")
+}
+document.getElementById("lB-list").innerHTML = localStorage.getItem("allInitials");
+document.getElementById("lB-list").innerHTML = localStorage.getItem("allFScores");
 
-//Need function to stop timer
-//Need to get the user Score
-//We need to play again??
-//We need to submit our initials and save to local storage
+
+
+
 
 
 
